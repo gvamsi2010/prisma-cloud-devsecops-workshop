@@ -5,14 +5,36 @@ resource "aws_s3_bucket" "data" {
   # bucket does not have versioning
   bucket        = "${local.resource_prefix.value}-data"
   force_destroy = true
-  
+
+  tags = {
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_file             = "code/deployment_s3.tf"
+    git_last_modified_at = "2024-01-26 23:01:56"
+    git_last_modified_by = "tprendervill@paloaltonetworks.com"
+    git_modifiers        = "tprendervill"
+    git_org              = "gvamsi2010"
+    git_repo             = "prisma-cloud-devsecops-workshop"
+    yor_name             = "data"
+    yor_trace            = "1a8cf58b-2b9f-416e-859c-3d0896498373"
+  }
 }
 
 resource "aws_s3_bucket_object" "data_object" {
   bucket = aws_s3_bucket.data.id
   key    = "customer-master.xlsx"
   source = "resources/customer-master.xlsx"
-  
+
+  tags = {
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_file             = "code/deployment_s3.tf"
+    git_last_modified_at = "2024-01-26 23:01:56"
+    git_last_modified_by = "tprendervill@paloaltonetworks.com"
+    git_modifiers        = "tprendervill"
+    git_org              = "gvamsi2010"
+    git_repo             = "prisma-cloud-devsecops-workshop"
+    yor_name             = "data_object"
+    yor_trace            = "2ed81cfb-7885-4dc1-a423-533184c32204"
+  }
 }
 
 resource "aws_s3_bucket" "financials" {
@@ -23,6 +45,17 @@ resource "aws_s3_bucket" "financials" {
   acl           = "private"
   force_destroy = true
 
+  tags = {
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_file             = "code/deployment_s3.tf"
+    git_last_modified_at = "2024-01-26 23:01:56"
+    git_last_modified_by = "tprendervill@paloaltonetworks.com"
+    git_modifiers        = "tprendervill"
+    git_org              = "gvamsi2010"
+    git_repo             = "prisma-cloud-devsecops-workshop"
+    yor_name             = "financials"
+    yor_trace            = "1dc56f47-93d6-4528-abf7-efba02722cf6"
+  }
 }
 
 resource "aws_s3_bucket" "operations" {
@@ -34,7 +67,18 @@ resource "aws_s3_bucket" "operations" {
     enabled = true
   }
   force_destroy = true
-  
+
+  tags = {
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_file             = "code/deployment_s3.tf"
+    git_last_modified_at = "2024-01-26 23:01:56"
+    git_last_modified_by = "tprendervill@paloaltonetworks.com"
+    git_modifiers        = "tprendervill"
+    git_org              = "gvamsi2010"
+    git_repo             = "prisma-cloud-devsecops-workshop"
+    yor_name             = "operations"
+    yor_trace            = "216aff07-d287-42ea-8e5a-af27a1a79fb5"
+  }
 }
 
 resource "aws_s3_bucket" "data_science" {
@@ -49,7 +93,18 @@ resource "aws_s3_bucket" "data_science" {
     target_prefix = "log/"
   }
   force_destroy = true
-  
+
+  tags = {
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_file             = "code/deployment_s3.tf"
+    git_last_modified_at = "2024-01-26 23:01:56"
+    git_last_modified_by = "tprendervill@paloaltonetworks.com"
+    git_modifiers        = "tprendervill"
+    git_org              = "gvamsi2010"
+    git_repo             = "prisma-cloud-devsecops-workshop"
+    yor_name             = "data_science"
+    yor_trace            = "2cad1187-bd2e-46da-a16b-50b3c15fd3c1"
+  }
 }
 
 resource "aws_s3_bucket" "logs" {
@@ -67,5 +122,16 @@ resource "aws_s3_bucket" "logs" {
     }
   }
   force_destroy = true
-  
+
+  tags = {
+    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_file             = "code/deployment_s3.tf"
+    git_last_modified_at = "2024-01-26 23:01:56"
+    git_last_modified_by = "tprendervill@paloaltonetworks.com"
+    git_modifiers        = "tprendervill"
+    git_org              = "gvamsi2010"
+    git_repo             = "prisma-cloud-devsecops-workshop"
+    yor_name             = "logs"
+    yor_trace            = "7cfa96a8-7b76-4c48-b0c9-7f97b5670f6d"
+  }
 }
